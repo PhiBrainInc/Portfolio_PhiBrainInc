@@ -24,11 +24,12 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typed", {
-        strings: ["The Solution."],
-        typeSpeed: 70,
+        strings: ["Technology and digital solutions agency specialising in web and mobile development.","Agence de technologies et de solutions numériques spécialisée dans le développement web et mobile."],
+        typeSpeed: 30
+        ,
         loop: true,
         startDelay: 1000,
-        showCursor: false 
+        showCursor: true
     });
 //FIN ANIMATION TITRE//
 
@@ -61,28 +62,13 @@ $(document).ready(function(){
     });
 
 
-    var skillsTopOffset = $(".skillSection").offset().top;
+    
     var statsTopOffset = $(".statsSection").offset().top;
     var countUpFinished = false;
 
 	$(window).scroll(function() {
 
-		if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
-
-			$('.chart').easyPieChart({
-		        easing: 'easeInOut',
-		        barColor: '#fff',
-		        trackColor: false,
-		        scaleColor: false,
-		        lineWidth: 4,
-		        size: 152,
-		        onStep: function(from, to, percent) {
-		        	$(this.el).find('.percent').text(Math.round(percent));
-		        }
-		    });
-			
-
-		}
+		
 
         if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
             $(".counter").each(function(){

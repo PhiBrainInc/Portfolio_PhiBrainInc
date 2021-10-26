@@ -3,57 +3,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@400;500;700&display=swap");
 
 
-
-:root {
-  --dark-one: #333;
-  --dark-two: #242424;
-  --main-color: #3498db;
-  --light-one: #fff;
-  --light-two: #f9fafb;
-  --light-three: #f6f7fb;
+a{
+    text-decoration: none;
 }
 
-.title {
+section .title{
     position: relative;
-    display: inline-block;
-    padding-bottom: 16px;
-    line-height: 1;
-    font-size: 45px;
-    margin-bottom: 10px;
-  }
-  
-  .title:before {
-    content: attr(data-title);
-    display: block;
-    margin-bottom: 6px;
-    color: var(--main-color);
-    font-size: 18px;
+    text-align: center;
+    font-size: 40px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-  
-  .title:after {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+}
+section .title::before{
     content: "";
     position: absolute;
-    width: 90px;
-    height: 5px;
-    border-radius: 3px;
-    background-color: var(--main-color);
-    bottom: 0;
+    bottom: 0px;
     left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
     transform: translateX(-50%);
-  }
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #3498db;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
   
   .title-sm {
-    color: var(--dark-one);
+    color: #333;
     font-weight: 600;
     font-size: 416px;
   }
   .text {
     font-size: 20px;
-    color: var(--dark-two);
+    color: #333;
     line-height: 1.6;
+
   }
 
 /*fin style generale*/
@@ -98,7 +93,7 @@ body{
     text-align: center;
     line-height: 45px;
     color: #fff;
-    z-index: 11001;
+    z-index: 70;
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
@@ -115,7 +110,7 @@ body{
 
 /*navigation*/
 .navba{
-    z-index: 60000;
+    z-index: 60;
     position: fixed;
     width: 100% ;
     padding: 30px 0;
@@ -196,6 +191,8 @@ body{
     font-weight: 100;
     letter-spacing: 7px;
 }
+
+
 .titleMessage .heading .main {
     font-size: 50px;
 }
@@ -225,55 +222,126 @@ body{
 .section {
     padding: 100px 0;
 }
+#prop { 
+    text-indent: 32px;
+    
+}
+#prop2 { 
+    text-indent: 32px; 
+    text-align: justify;
+}
 .aboutImage{
     max-width: 100%;
 }
+#about .col-md-7 .phi{
+    font-size: 30px;
+    font-weight: 500;
+    color: #3498db;
+}
+#about .col-md-7 .brain{
+    font-size: 30px;
+    font-weight: 500;
+    
+}
+#about .col-md-7 .title::after{
+    content: "Phi-Brain";
+}
 /*FIN A PROPOS*/
 
-/*COMPETENCES*/
+/*SERVICE*/
 
-.skillSection, .contactSection{
+.contactSection{
     background-color: #3498db;
     color: #fff;
 }
-.skillSection .title::after{
-    background-color: #fff;
 
-}
-.skill{
-    text-align: center;
-    margin-left: 10px;
-}
-.col-md-12 p{
+.services {
+        color:#fff;
+        background:#3498db;
+        font-family: 'Poppins', sans-serif;
+        padding: 100px 0;
+    }
+
+.services .title::after{
+        background: #3498db;
+        content: "Nos services  ";
+        color: #fff;
+    }
+.services .serv-content {
+
+        display: flex;
+        
+        align-items: center;
+        justify-content: space-around;
+
+    }
+.services .serv-content .card{
+        
+        width: 100%;
+        max-width: 390px;
+        min-height: 300px;
+        background:#60ade0;
+        text-align: center;
+        border-radius: 6px;
+        padding: 50px 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+.services .serv-content .card:hover{
+        background: #444;
+    }
+.services .serv-content .card .box{
+        transition: all 0.3s ease;
+    }
+ .services .serv-content .card:hover .box{
+        transform: scale(1.05);
+    }
+ .services .serv-content .card i{
+        font-size: 50px;
+        color: #444;
+        transition: color 0.3s ease;
+    }
+.services .serv-content .card:hover i{
+        color: #fff;
+    }
+.services .serv-content .card .text{
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+    }
+.services .text{
     color: #fff;
 }
-.chart{
- position: relative;
- width: 152px;
- height: 152px;
- display: inline-block;
- text-align: center;   
-}
-.chart canvas {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.chart .percent{
-  color: white;
-  line-height: 152px;
-  display: inline-block;
-  font-size: 35px;
-}
-.chart .percent::after{
-    content: '%';
-}
+.boutonRead {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+  }
+  
+  .boutonRead:hover {
+    background-color: #60ade0;
+  }
 
 
-/*FIN COMPETENCE*/
+/*FIN SERVICE*/
 
 /*STAT*/
-
+.statsSection .head{
+    text-align: center;
+    padding-bottom: 40px;
+    width: 100%;
+}
+.statsSection .head .title::after{
+    content:"Historique";
+}
 .squareItem {
 	margin-top: 30px;
     position: relative;
@@ -344,7 +412,11 @@ body{
     border: 1px solid #fff;
     border-radius: 2px;
     text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+   
 }
+
 
 .contactButton:hover{
     text-decoration: none;
@@ -382,6 +454,9 @@ body{
 .section .heading {
     text-align: center;
     width: 100%;
+}
+.section .heading .title::after{
+    content: "Nos travaux";
 }
 .item li{
     display: inline-block;
@@ -473,41 +548,39 @@ body{
 
 /*FIN PORTFOLIO*/
 
-/*EQUIPE*/
+/*Competence*/
 
-.equipe{
+.competence{
     color: #fff;
     background: #3498db;
     font-family: 'Poppins', sans-serif;
     padding: 100px 0;
+}
+.competence .title::after{
+    background: #3498db;
+    content: "Nos maîtrises";
+    color: #fff;
 }
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
-.equipe .title::after{
-    background-color:#fff;
-}
-.section .title {
-    text-align: center;
-    width: 100%;
-}
-.equipe .carousel .card{
+.competence .carousel .card{
   background: #60ade0;
   border-radius: 6px;
   padding: 22px 35px;   
   text-align: center;
   transition: all 0.3s ease;
 } 
-.equipe .carousel .card .box{
+.competence .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.equipe .carousel .card img{
+.competence .carousel .card img{
      height: 150px;
      width: 150px;
      object-fit: cover;
@@ -515,25 +588,25 @@ body{
      border: 5px solid #fff;
      
 }
-.equipe .carousel .card .text{
+.competence .carousel .card .text{
     font-weight: 500;
     margin: 10px;
     color: #fff;
 } 
-.equipe .carousel .card p{
+.competence .carousel .card p{
     font-size: 15px;
     color: #fff;
     line-height: 1.6;
 }
-.equipe .carousel .card:hover{
+.competence .carousel .card:hover{
     background: #444;
     transition: all 0.3s ease;
     
 }
-.equipe .carousel .card:hover img{
+.competence .carousel .card:hover img{
     border-color: #444;
 }
-.equipe .carousel .card:hover .box{
+.competence .carousel .card:hover .box{
     transform: scale(1.05);
 }
 .owl-dots{
@@ -557,7 +630,7 @@ body{
     background: #fff!important;
 }
 
-
+/*FIN COMPETENCE*/
 
 
 /*CONTACT*/
@@ -568,6 +641,7 @@ body{
     padding: 216px 0 136px;
     
 }
+
 .contact:before, .contact:after{
     content: "";
     position: absolute;
@@ -592,9 +666,8 @@ body{
     padding: 88px 72px;
 }
 
-.contact-info .title:after{
-    left: 0;
-    transform: initial;
+.contact .contact-info .title::after{
+    content: "Contact";
 }
 .information-wrap{
     margin-top: 32px;
@@ -615,8 +688,8 @@ body{
     height: 50px;
     display: inline-block;
     border-radius: 50%;
-    background-color: var(--main-color);
-    color: var(--light-one);
+    background-color: #3498db;
+    color: #fff;
     text-align: center;
     font-size: 19px;
     margin-right: 16px;
