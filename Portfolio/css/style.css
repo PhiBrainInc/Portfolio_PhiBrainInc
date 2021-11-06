@@ -2,7 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@400;500;700&display=swap");
 
-
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
 }
@@ -264,28 +266,30 @@ body{
 
 .services .title::after{
         background: #3498db;
-        content: "Nos services  ";
+        content: "Nos services";
         color: #fff;
     }
 .services .serv-content {
 
         display: flex;
-        
+        flex-flow: row wrap;  
         align-items: center;
+        align-content: space-between;
         justify-content: space-around;
-
     }
+
 .services .serv-content .card{
         
-        width: 100%;
+        width: 50%;
         max-width: 390px;
-        min-height: 300px;
+        min-height: 200px;
         background:#60ade0;
         text-align: center;
         border-radius: 6px;
         padding: 50px 25px;
         cursor: pointer;
         transition: all 0.3s ease;
+        margin: 10px;
     }
 .services .serv-content .card:hover{
         background: #444;
@@ -442,8 +446,16 @@ body{
 
 .filter li{
     display: inline-block;
-    padding: 5px
-    ;
+    padding: 5px;
+  
+}
+ul{
+    
+    list-style-type: none;
+}
+li{
+    margin-bottom: 5px;
+    margin-left: 5px;
 }
 .filter .current{
     background-color: #3498db;
@@ -671,17 +683,21 @@ body{
 }
 .information-wrap{
     margin-top: 32px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
 }
 
 .information{
     display: flex;
-    align-items: center;
-}
-
-.information:not(:last-child){
-    margin-bottom: 21px;
+    cursor: pointer;
+    transition: all 0.3 ease;
 
 }
+.information:hover{
+    transform: scale(1.05);
+}
+
 
 .contact-icon{
     min-width: 50px;
@@ -698,10 +714,13 @@ body{
 .contact-icon i{
     line-height: 50px;
 }
+.contact-icon a{
+    color: #fff;
+}
 
 .info-text{
     font-size: 16px;
-    display: inline-block;
+    margin-top: 10px;
 }
 
 /*FIN CONTACT*/
@@ -771,4 +790,10 @@ body{
         line-height: 38px;
     }
     
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
 }

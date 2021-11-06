@@ -3,6 +3,7 @@ $(window).on("load", function(){
     $(".loader .inner").fadeOut(800, function(){
         $(".loader").fadeOut(1000);
     });
+
     $(".items").isotope({
         filter: '*',
         animationOptions:{
@@ -11,7 +12,7 @@ $(window).on("load", function(){
             queue: false
         }
     });
-});
+})
 //FIN LOADER//
 
 
