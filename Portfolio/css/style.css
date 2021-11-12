@@ -789,6 +789,13 @@ li{
         font-size: 23px;
         line-height: 38px;
     }
+    .information-wrap{
+        margin-top: 32px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
     
 }
 
